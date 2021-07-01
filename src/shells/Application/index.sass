@@ -1,0 +1,99 @@
+$main-color: #55A4E4 !default
+$secondary-color: #4c90c8 !default
+$light-color: #55a4e434 !default
+
+$nav-height: 60px !default
+// $logo-height: 55px !default
+$logo-height: 100% !default
+$nav-color-background: #f4f4f4 !default
+
+$nav-logo-padding: 0 14px !default
+
+$nav-item-border-size: 3px !default
+$nav-item-border-color: #2a6a9e !default
+$nav-item-space-between: 30px !default
+
+$dropdown-shadow-size: 6px 12px !default
+$dropdown-shadow-color:  rgba(0, 0, 0, 0.175) !default
+
+$dropdown-item-hover-color: #2a6a9e !default
+
+// style scope
+.shell-application
+    >.nav-header
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        height: $nav-height
+
+        background: $nav-color-background
+
+        a
+            color: black
+            text-decoration: none
+
+        .dropdown-header
+            display: flex
+            justify-content: center
+            align-items: center
+            text-transform: uppercase
+            font-weight: 500
+            color: #525252
+
+            
+
+        .dropdown
+            &.is-active
+                .dropdown-body
+                    &::before
+                        content: ""
+                        display: block
+                        width: 100%
+                        background-color: $main-color
+                        height: $nav-item-border-size
+
+        .dropdown-menu    
+            .menu
+                padding: 0
+
+                >*
+                    height: 100%
+                    display: block
+
+        .nav-header-menu-item, .dropdown-header
+            display: flex
+            justify-content: center
+            align-items: center
+
+            height: 100%
+
+            cursor: pointer
+
+        .nav-header-menu-item
+            &:hover 
+                border-top: $nav-item-border-size solid #ffffff00
+                border-bottom: $nav-item-border-size solid $nav-item-border-color
+                border-collapse: collapse
+
+        .nav-header-start, .nav-header-center, .nav-header-end
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+        .nav-header-start
+            .logo
+                cursor: pointer
+
+                img
+                    height: $logo-height
+                    padding: $nav-logo-padding
+                    margin-left: 20px
+
+        .nav-header-end
+            >*
+                margin-right: $nav-item-space-between
+
+                &.is-active
+                    >*
+                        color: $nav-item-border-color

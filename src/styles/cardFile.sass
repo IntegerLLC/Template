@@ -1,0 +1,74 @@
+$nav-color-background: #f4f4f4 !default
+
+$dropdown-shadow-size: 6px 12px !default
+$dropdown-shadow-color:  rgba(0, 0, 0, 0.175) !default
+
+$dropdown-item-padding: 6px !default
+$dropdown-item-hover-color: #2a2a90bd !default
+
+.card-file-container
+    height: 100%
+    display: flex
+    flex-flow: column
+    padding: 10px
+    max-width: 100vw
+
+    .card-file-tools
+        display: flex
+        justify-content: flex-end
+        margin-bottom: 10px
+        align-items: center
+
+        >button
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
+
+            
+    .card-file
+        display: flex
+        width: 100%
+        // height: 100%
+        height: calc(100% - 40px)
+        max-height: calc(100vh - 64px)
+
+        .card-tree
+            // width: 20%
+            width: 300px
+            background: linear-gradient(169.06deg, rgba(83, 163, 227, 0.02) -2.45%, rgba(94, 169, 229, 0.09) 100.9%, rgba(255, 255, 255, 0) 100.91%)
+            color: #505050
+            position: relative
+            overflow: auto
+            
+            .is-selected
+                background: linear-gradient(270deg, rgba(91, 167, 236, 0) 2.31%, #AEDBFF 100%)
+            
+            .is-drag-enter
+                border: 1px solid grey
+
+        .resize-tool
+                height: 100%
+                width: 4px
+                margin: 0 2px
+                background: #d2dfea
+                right: 2px
+                top: 0
+                cursor: col-resize
+                // opacity: 0
+                &:hover
+                    background: #aed0ec
+                    // opacity: 1
+
+        .card-table
+            // width: 80%
+            width: auto
+            overflow: auto
+
+.drag-element
+    position: absolute
+    background: #f4f4f4
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+    pointer-events: none
+
+    p
+        padding: 4px 20px

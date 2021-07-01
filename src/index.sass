@@ -1,0 +1,279 @@
+$main-color: #55A4E4 !default
+$secondary-color: #4c90c8 !default
+$light-color: #55a4e434 !default
+$nav-item-border-size: 3px !default
+$nav-color-background: #ffffff !default
+$nav-color-hover-link: #ffffff !default
+$dropdown-shadow-size: 6px 12px !default
+$dropdown-shadow-color:  rgba(0, 0, 0, 0.175) !default
+$dropdown-item-padding: 5px !default
+
+// FONTS
+@font-face
+    font-family: "RobotoRegular"
+    src : url("/assets/fonts/Roboto-Regular.ttf")
+
+@font-face
+    font-family: "RobotoLight"
+    src : url("/assets/fonts/Roboto-Light.ttf")
+
+@font-face
+    font-family: "RobotoMedium"
+    src : url("/assets/fonts/Roboto-Medium.ttf")
+
+@font-face
+    font-family: "RobotoThin"
+    src : url("/assets/fonts/Roboto-Thin.ttf")
+
+@font-face
+    font-family: "RobotoBold"
+    src : url("/assets/fonts/Roboto-Bold.ttf")
+
+html
+    overflow: hidden
+    scrollbar-color: $secondary-color white
+
+body
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+
+.workspace
+    height: 100%
+    .app-shell
+        height: 100%
+        display: flex
+        flex-flow: column
+        .workspace
+            flex: auto
+            height: calc(100% - 60px)
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "RobotoRegular"
+
+    &::before, &::after
+        box-sizing: border-box
+
+.modal-background
+    overflow: auto
+    z-index: 99
+    .modal
+        z-index: 999
+
+//scroll
+\::-webkit-scrollbar
+  background-color: #f9f9f9
+  width: 5px
+  height: 5px
+  border-radius: 10px
+  cursor: pointer
+
+\::-webkit-scrollbar-thumb
+  background-color: $secondary-color
+  height: 30px
+  border-radius: 10px
+  cursor: pointer
+
+\::-moz-scrollbar
+  background-color: #f9f9f9
+  width: 5px
+  height: 5px
+  border-radius: 10px
+  cursor: pointer
+
+\::-moz-scrollbar-thumb
+  background-color: $secondary-color
+  height: 30px
+  border-radius: 10px
+  cursor: pointer
+
+button
+    cursor: pointer
+    &:hover
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15))
+
+h1
+    font-style: normal
+    font-weight: 500
+    font-size: 30px
+    line-height: 35px
+    color: #000000
+
+h2
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 23px
+    color: #000000
+
+h3
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    color: #000000
+    padding: 8px 0
+
+p
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 16px
+    color: #000000
+    
+
+.filter-button, .add-button, .question-button, .send-message-button, .options-button
+    width: 28px
+    height: 28px
+    border: none
+    background-color: $main-color
+    outline: none
+    border-radius: 50%
+    &:active
+        background-color: $secondary-color
+
+.add-button
+    background-image: url(/assets/image/add.svg)
+    margin-left: 6px
+
+.question-button
+    background-image: url(/assets/image/question.svg)
+
+.filter-button
+    background-image: url(/assets/image/filter.svg)
+
+.options-button
+    background-image: url(/assets/image/options.svg)
+
+.send-message-button
+    background-image: url(/assets/image/send-message.svg)
+
+.check-mark, .folder-icon-menu, .file-icon-menu, .edit-icon, .trash-icon, .duplicate-icon, .empty-mark, .row-up-icon, .row-down-icon, .close-icon
+    width: 15px
+    height: 15px
+    margin-right: 4px
+    
+.edit-icon
+    background-image: url(/assets/image/edit-icon.svg)
+
+.check-mark
+    background-image: url(/assets/image/mark-icon.svg)
+
+.folder-icon-menu
+    background-image: url(/assets/image/folder-icon-menu.svg)
+
+.file-icon-menu
+    background-image: url(/assets/image/file-icon-menu.svg)
+
+.trash-icon
+    background-image: url(/assets/image/trash-icon.svg)
+
+.row-up-icon
+    background-image: url(/assets/image/row-up-icon.svg)
+
+.row-down-icon
+    background-image: url(/assets/image/row-down-icon.svg)
+
+.duplicate-icon
+    background-image: url(/assets/image/duplicate-icon.svg)
+
+.close-icon
+    background-image: url(/assets/image/close-icon.svg)
+
+.error-message, .succes-message, .info-message
+    width: 20px
+    height: 20px
+
+.error-message
+    background-image: url(/assets/image/error-message.svg)
+
+.succes-message
+    background-image: url(/assets/image/succes-message.svg)
+
+.info-message
+    background-image: url(/assets/image/info-message.svg)
+
+.button-tool
+    padding: 5px 20px
+    border: none
+    background: $main-color
+    border-radius: 5px
+    color: white
+    outline: none
+    font-size: 16px
+    height: 40px
+    &:active
+        background: $secondary-color
+
+.cancel-tool
+    background: white
+    color: darkgrey
+    border: 2px solid #cfcfcf
+    &:active
+        background: #cfcfcf
+        color: white
+
+.border-button-tool
+    background: white
+    color: $main-color
+    border: 2px solid $main-color
+    &:active
+        background: $main-color
+        color: white
+
+.field-ellipsis
+        padding-right: 20px
+        background: url(/assets/image/field-ellipsis.svg) no-repeat center
+        background-position-x: calc(100% - 4px)
+
+.unselectable
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    
+// dropdown global +
+.menu
+    padding: 5px
+    background: white
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+
+.menu-item
+    cursor: pointer
+    padding: 5px
+
+    &.is-active
+        background: $light-color
+
+
+.dropdown
+    .dropdown-body, .menu
+        list-style-type: none
+        background: $nav-color-background
+        box-shadow: 0 $dropdown-shadow-size $dropdown-shadow-color
+
+    .dropdown-body
+        left: 50%
+        transform: translateX(-50%)
+        width: max-content
+
+        >*, a
+            width: 100%
+            padding: $dropdown-item-padding
+
+        .list-item:hover, .list-item.is-active
+            background-color: $light-color
+            // color: $nav-color-hover-link
+            cursor: pointer
+
+            >
+                a
+                    // color: $nav-color-hover-link
+
+.dropdown, .dropdown-header
+            height: 100%
+            z-index: 3
+
+// dropdown global -

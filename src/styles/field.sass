@@ -1,0 +1,100 @@
+$main-color: #55A4E4 !default
+$secondary-color: #4c90c8 !default
+$light-color: #55a4e434 !default
+
+.field
+    width: max-content
+    height: fit-content
+    position: relative
+    display: flex
+    justify-content: flex-end
+    background-color: white
+    align-items: flex-end
+
+    label
+        position: absolute
+        top: 0
+        left: 8px
+        padding: 0 4px
+        background: white
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        color: rgba(0, 0, 0, 0.5)
+
+    input, select, textarea
+        margin-top: 8px
+        padding: 6px 0 6px 10px
+        font-size: 15px
+        outline: none
+        border: 1px solid #E9E9E9
+        border-radius: 3px
+        outline: none
+        background-color: transparent
+        width: 100%
+        // -webkit-box-shadow: inset 0 0 0 50px #ffffff
+        // -webkit-text-fill-color: #000000
+
+        &::placeholder
+            color: grey
+        
+        &:disabled
+            color: black
+
+    input[type = "date"]
+        height: 32px
+
+    select
+        -webkit-appearance: none
+        -moz-appearance: none
+        -ms-appearance: none
+        appearance: none
+        outline: none
+        padding-right: 20px
+        background: url(/assets/image/arrow-select.svg) no-repeat center
+        background-position-x: calc(100% - 4px)
+    
+    input::-webkit-calendar-picker-indicator
+        opacity: 0.4
+
+    textarea
+        resize: none
+        height: inherit
+    
+    .clear-reference-button
+        width: 22px
+        height: 22px
+        border: none
+        border-radius: 50%
+        outline: none
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: 4px
+        margin-bottom: 6px
+        img
+            padding: 2px
+            pointer-events: none
+
+    &.checkbox
+        width: max-content
+        height: fit-content
+        display: flex
+        justify-content: flex-end
+        flex-direction: row-reverse
+        background-color: white
+        align-items: center
+        border: 1px solid #E9E9E9
+        border-radius: 3px
+        height: 40px
+        padding-right: 12px
+
+        input
+            width: auto
+            margin: 0
+            margin-left: 10px
+            margin-right: -5px
+
+        label
+            position: relative
+            font-size: 14px

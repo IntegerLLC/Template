@@ -1,0 +1,55 @@
+// blank styles
+.blank, .blank-modal
+    padding: 20px
+    max-width: 100vw
+    max-height: 100vh
+
+    .blank-content
+        display: flex
+
+        .blank-actions-view
+            display: none
+            padding-left: 20px
+            margin-left: 20px
+            border-left: 2px solid #d9d9d9
+            &.is-active
+                display: block
+
+    .blank-row
+        display: flex
+        .field
+            &:last-child
+                margin-right: 0
+
+    .blank-main-tools
+        margin-top: 14px
+        display: flex
+        justify-content: space-between
+
+    .blank-header
+        margin-bottom: 14px
+        display: flex
+        align-items: center
+
+        h2
+            white-space: nowrap
+            padding-right: 10px
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 23px
+
+        .blank-header-left, .blank-header-right
+            display: flex
+            align-items: center
+        
+        .blank-header-left
+            justify-content: start
+
+        .blank-header-right
+            justify-content: end
+        
+        .blank-header-tools
+            width: 100%
+            display: flex
+            justify-content: space-between

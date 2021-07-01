@@ -1,0 +1,62 @@
+.loader-image
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 0
+    height: 0
+    opacity: 0
+    z-index: 999
+    // second style ( screen fill )
+    // top: -50vh
+    // left: -50vw
+    // width: 200vw
+    // height: 200vh
+
+    -webkit-transition: -moz-all .3s ease-out
+    -moz-transition: -webkit-all .3s ease-out
+    -o-transition: -o-all .3s ease-out
+    transition: all .3s ease-out
+
+    -webkit-animation: rotating .1s linear infinite
+    -moz-animation: rotating .1s linear infinite
+    -ms-animation: rotating .1s linear infinite
+    -o-animation: rotating .1s linear infinite
+    animation: rotating .1s linear infinite
+
+    &.is-active
+        width: 100px
+        height: 100px
+        top: calc(50% - 50px)
+        left: calc(50% - 50px)
+        opacity: 1
+        -webkit-animation: rotating .3s linear infinite
+        -moz-animation: rotating .3s linear infinite
+        -ms-animation: rotating .3s linear infinite
+        -o-animation: rotating .3s linear infinite
+        animation: rotating .3s linear infinite
+
+@-webkit-keyframes rotating
+    from
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    to
+        -webkit-transform: rotate(-360deg)
+        -o-transform: rotate(-360deg)
+        transform: rotate(-360deg)
+
+@keyframes rotating
+    from
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    to
+        -ms-transform: rotate(-360deg)
+        -moz-transform: rotate(-360deg)
+        -webkit-transform: rotate(-360deg)
+        -o-transform: rotate(-360deg)
+        transform: rotate(-360deg)

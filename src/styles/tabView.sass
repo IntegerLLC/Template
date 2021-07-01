@@ -1,0 +1,23 @@
+$main-color: #55A4E4 !default
+$secondary-color: #4c90c8 !default
+$light-color: #55a4e434 !default
+
+.tab-title
+    display: inline-block
+    cursor: pointer
+    background: white
+    color: $main-color
+    padding: 5px 10px
+    border: 2px solid $main-color
+    cursor: pointer
+    margin-right: -2px
+    &.is-active
+        position: relative
+        background-color: $main-color
+        color: white
+
+.tab-content
+    padding-top: 10px
+
+    &.is-active
+        display: block
