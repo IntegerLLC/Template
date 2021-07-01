@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "start": "serve dist"
   },
   "devDependencies": {
     "node-sass": "^5.0.0",
