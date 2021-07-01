@@ -1,10 +1,27 @@
+## Dependencies
+```sh
 npm install
 npm install --g serve
+```
 
-remove .git folder in your clone Template
+> remove `.git` folder in your clone Template
 
-- Build
-yarn build || npm run build
+## Build
+`yarn`
+```sh
+yarn build
+```
+`npm`
+```sh
+npm run build
+```
 
-- Start
-yarn start || npm run start
+## Start
+`yarn`
+```sh
+yarn start
+```
+`npm`
+```sh
+npm run start
+```
