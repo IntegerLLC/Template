@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/PortalTB"; //https://unilever.integer.ru:8080/PortalTB/
+const url = "http://localhost:8080/PortalTB/"; 
 
 import { getUserId } from "../src/lib/account.js"
 import { Message } from "@integerUI.js";
