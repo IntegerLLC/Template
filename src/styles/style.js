@@ -7,3 +7,5 @@ import "./loader.sass";
 import "./message.sass";
 import "./table.sass";
 import "./tabView.sass";
+import "./customTable.sass";
+import "./reportTable.sass"

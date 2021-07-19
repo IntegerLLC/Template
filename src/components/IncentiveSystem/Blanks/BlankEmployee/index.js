@@ -40,6 +40,7 @@ export const BlankEmployee = (props, docid) => {
     
     let CardFileEmployeeField = Field({title: "CardFile Employee", reference: CardFileEmployee, width: 300, placeholder: "Ссылочное поле"});
     let checkboxExampleField = Field({title: "Поле checkbox", type: "checkbox"});
+    let textAreaField = Field({ title: "Test area", type: "textarea", value: "test" });
 
     let subTableProps = [
         {id: "name"},
@@ -52,7 +53,7 @@ export const BlankEmployee = (props, docid) => {
     let centerRow = blank.createRow();
 
     let exampleRow = blank.createRow();
-    exampleRow.addItems([CardFileEmployeeField, checkboxExampleField]);
+    exampleRow.addItems([CardFileEmployeeField, checkboxExampleField, textAreaField]);
 
     headerRow.addItems([surnameInitial, name, surname, patronymic]);
     centerRow.addItems([gender, dateBirth, email, phone]);

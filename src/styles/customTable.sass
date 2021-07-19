@@ -1,0 +1,154 @@
+$table-border-color: #dddddd !default
+$table-header-text-color: #757575 !default
+$main-color: #55A4E4 !default
+$secondary-color: #4c90c8 !default
+$light-color: #55a4e434 !default
+
+.table
+    border-top: 1px solid $table-border-color
+    border-left: 1px solid $table-border-color
+    // min-width: max-content
+    width: fit-content
+    .table-row
+        cursor: pointer
+
+    tr:nth-child(even) td
+        background: #f5f5f5
+
+    .table-divider 
+        width: 5px
+        &:hover
+            opacity: 1
+            background-color: #5981d8
+
+    .table-column, .table-cell
+        border: none
+        border-bottom: 1px solid $table-border-color
+        border-right: 1px solid $table-border-color
+        
+        >div
+            overflow: hidden
+            text-overflow: ellipsis
+        
+    .table-column
+        text-transform: uppercase
+        font-size: 13px
+        font-weight: 100
+        color: $table-header-text-color
+    
+    .table-cell
+        font-size: 15px
+        overflow: hidden
+        text-overflow: ellipsis
+        input
+            width: 100%
+            text-align: center
+            outline: none
+            border: none
+            overflow: hidden
+            text-overflow: ellipsis
+            background-color: transparent
+            cursor: pointer
+            &::placeholder
+                color: #c7c7c7
+
+        select
+            text-align: center
+            text-align-last: center
+            overflow: hidden
+            text-overflow: ellipsis
+            width: 100%
+            border: none
+            background-color: transparent
+            font-size: 16px
+            outline: none
+            -webkit-appearance: none
+            -moz-appearance: none
+            -ms-appearance: none
+            appearance: none
+            outline: 0
+            padding-right: 20px
+            background: url(/assets/image/arrow-select.svg) no-repeat right center
+
+        .reference-field
+            text-decoration: underline
+            color: $secondary-color
+            overflow: hidden
+            text-overflow: ellipsis
+            &:hover
+                color: $light-color
+            &::placeholder
+                color: $secondary-color
+        *
+            font-size: 15px
+
+    tr
+        &:hover
+            >td
+                background: $light-color
+        &.is-active
+            >td 
+                background: $secondary-color
+                color: white
+
+    tr
+        &.clicket-row
+            >td
+                background: $light-color
+    
+    td 
+        &.clicket-cell
+            border: 1px solid $secondary-color
+
+.back-button
+    width: 12px
+    height: 15px
+    background-image: url(/assets/image/backAction.svg)
+
+.arrow 
+    margin-right: 3px
+    width: 15px
+    height: 14px
+    background-image: url(/assets/image/folder-icon.svg)
+
+    &.is-active
+        background-image: url(/assets/image/folder-open-icon.svg)
+        width: 18px
+
+.table-column, .table-cell
+    padding: 2px
+    
+    &.is-hidden
+        padding: 0
+        margin: 0
+        border-right: 0
+
+.header-content
+    display: flex
+    align-items: center
+
+    .header-content-text
+        overflow: hidden
+        text-overflow: ellipsis
+
+.order-arrow
+    margin-right: 3px
+    width: 10px
+    height: 8px
+    min-width: 10px
+
+    &.is-up
+        background-image: url(/assets/image/is-up.svg)
+
+    &.is-down
+        background-image: url(/assets/image/is-down.svg)
+
+.table-folder
+        width: 15px
+        height: 14px
+        background-image: url(/assets/image/folder-icon.svg)
+    
+.table-file
+    width: 11px
+    height: 14px
+    background-image: url(/assets/image/file-icon.svg)

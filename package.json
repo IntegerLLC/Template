@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "start": "serve dist"
+    "start": "serve -l 54321 dist"
   },
   "devDependencies": {
     "node-sass": "^5.0.0",
